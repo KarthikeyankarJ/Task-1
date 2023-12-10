@@ -8,6 +8,7 @@ HTTP/1.1 relies on a single request-response connection at a time, meaning that 
 
 2.Header Compression:
 
+
 Headers in HTTP/1.1 can be verbose, leading to increased overhead. HTTP/2 employs header compression, using a technique called HPACK, which significantly reduces the size of headers. This reduction in overhead contributes to faster loading times and more efficient use of network resources.
 
 3.Binary Protocol:
