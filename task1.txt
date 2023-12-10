@@ -1,0 +1,71 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2:
+
+The evolution of the internet has seen significant advancements in web protocols, and among the most noteworthy is the transition from HTTP/1.1 to HTTP/2. These protocols govern how data is transferred between web servers and clients, influencing the speed, efficiency, and overall performance of websites. In this blog post, we'll delve into the key differences between HTTP/1.1 and HTTP/2, exploring how the latter has addressed many of the limitations of its predecessor.
+
+1.Multiplexing:
+
+HTTP/1.1 relies on a single request-response connection at a time, meaning that if a browser wants to load multiple resources, it has to establish multiple connections. This can lead to a phenomenon known as the "head-of-line blocking," where a slow-loading resource delays the loading of subsequent resources. HTTP/2 introduces multiplexing, allowing multiple requests and responses to be sent simultaneously over a single connection. This significantly improves the efficiency of data transfer, reducing latency and improving page load times.
+
+2.Header Compression:
+
+Headers in HTTP/1.1 can be verbose, leading to increased overhead. HTTP/2 employs header compression, using a technique called HPACK, which significantly reduces the size of headers. This reduction in overhead contributes to faster loading times and more efficient use of network resources.
+
+3.Binary Protocol:
+
+While HTTP/1.1 relies on plain text for communication, HTTP/2 uses a binary protocol. This makes the data transfer more compact and efficient, reducing the amount of data that needs to be transmitted between the server and the client. The binary format is also more machine-friendly, making it easier to parse and process, further enhancing performance.
+
+4.Server Push:
+
+One of the notable features of HTTP/2 is server push. In HTTP/1.1, the server can only respond to client requests, but in HTTP/2, the server can initiate the transfer of data to the client before the client explicitly requests it. This can lead to faster page loads by proactively sending resources the server anticipates the client will need.
+
+5.Connection Management:
+
+HTTP/1.1 requires multiple connections for parallel resource loading, leading to higher resource consumption and increased latency. HTTP/2 uses a single connection per origin, reducing the overhead associated with managing multiple connections. This, combined with multiplexing, results in more efficient use of network resources.
+
+6.Backward Compatibility:
+
+To ensure a smooth transition, HTTP/2 is designed to be backward compatible with HTTP/1.1. This means that if a client or server doesn't support HTTP/2, communication can still occur using the older protocol. This backward compatibility ensures a gradual adoption of the new protocol without disrupting existing web infrastructure.
+
+Conclusion:
+
+In summary, the transition from HTTP/1.1 to HTTP/2 represents a significant leap forward in web protocol technology. With improvements in multiplexing, header compression, binary protocol, server push, and connection management, HTTP/2 offers a more efficient and faster web experience. As the internet continues to evolve, embracing and understanding these advancements becomes crucial for developers and system administrators to optimize the performance of their websites and applications.
+
+
+
+Write a blog about objects and its internal representation in Javascript:
+
+In JavaScript, objects are a fundamental data type that allows developers to organize and structure data. Objects are used to represent real-world entities, and they consist of key-value pairs where each key is a string (or a Symbol) and each value can be of any data type, including other objects. Understanding the internal representation of objects in JavaScript involves recognizing how they are stored and accessed in memory.
+
+
+Object Structure:
+
+Properties and Methods
+Properties are the key-value pairs that define the characteristics of an object.
+Methods are functions that are associated with an object.
+
+Prototypes:
+JavaScript is a prototype-based language, and objects can inherit properties and methods from other objects through their prototype chain.
+The prototype property is used to link objects to other objects, forming a chain.
+
+
+
+Internal Representation:
+
+Memory Allocation:
+Objects are allocated memory in a heap, and variables store references to the memory locations.
+The actual data (key-value pairs) and methods are stored in memory.
+
+Property Access:
+Properties are accessed through a process called property resolution.
+JavaScript engines use a combination of hash maps and other data structures for efficient property lookup.
+
+
+Object Descriptors:
+Each property of an object has an associated descriptor that defines its behavior (e.g., whether it can be modified, enumerated, etc.).
+
+Hidden Classes (V8 Engine):
+Some JavaScript engines, like V8 (used in Chrome), use a concept called hidden classes to optimize property access.
+Hidden classes help reduce the time spent on property lookup by organizing objects with similar structures together.
+
+
+Understanding the internal representation of objects in JavaScript is crucial for writing efficient and performant code. Developers should be aware of concepts like prototypes, memory allocation, property access, and engine-specific optimizations to make informed decisions when designing and working with objects in their applications.
